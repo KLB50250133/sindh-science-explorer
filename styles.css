@@ -248,3 +248,34 @@ footer { display:flex; justify-content:space-between; gap:10px; width:min(100% -
     font-size: 18px;
   }
 }
+/* Fix student photos on narrow phone screens */
+#homeScreen .team-section .student-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+#homeScreen .team-section .student-card {
+  min-width: 0 !important;
+  width: 100% !important;
+  overflow: hidden;
+  text-align: center;
+}
+
+#homeScreen .team-section img.student-photo {
+  display: block !important;
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 100% !important;
+  margin: 0 auto 9px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+
+@media (max-width: 360px) {
+  #homeScreen .team-section img.student-photo {
+    width: 54px !important;
+    height: 54px !important;
+  }
+}
