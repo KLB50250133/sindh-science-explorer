@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Offline-first bilingual science quiz and revision app for Classes 6–8.">
+  <title>Sindh Science Explorer</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">✦</div>
+    <div class="brand">
+      <h1 data-i18n="appName">Sindh Science Explorer</h1>
+      <p data-i18n="tagline">Discover • Practise • Improve</p>
+    </div>
+    <button id="languageButton" class="language-button" aria-label="Change language">سنڌي</button>
+  </header>
+
+  <main>
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="offlineBadge">OFFLINE-READY LEARNING</span>
+          <h2 data-i18n="welcomeTitle">Small steps. Strong science.</h2>
+          <p data-i18n="welcomeText">Practise science, discover your weak topics, and build confidence one quiz at a time.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">⚛️</div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2 data-i18n="chooseClass">Choose your class</h2>
+          <p data-i18n="chooseClassSub">Start a short science quiz</p>
+        </div>
+      </div>
+      <div class="class-grid">
+        <button class="class-card" data-class="6"><span class="class-number">06</span><span data-i18n="classLabel">Class</span><span class="card-arrow">↗</span></button>
+        <button class="class-card" data-class="7"><span class="class-number">07</span><span data-i18n="classLabel">Class</span><span class="card-arrow">↗</span></button>
+        <button class="class-card" data-class="8"><span class="class-number">08</span><span data-i18n="classLabel">Class</span><span class="card-arrow">↗</span></button>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2 data-i18n="yourProgress">Your learning</h2>
+          <p data-i18n="progressSub">Saved on this device</p>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-icon">📝</span><strong id="totalQuizzes">0</strong><span data-i18n="quizzesTaken">Quizzes taken</span></div>
+        <div class="stat-card"><span class="stat-icon">🎯</span><strong id="overallAccuracy">—</strong><span data-i18n="overallAccuracy">Overall accuracy</span></div>
+      </div>
+      <button id="reviewButton" class="secondary-button full-width">✨ <span data-i18n="revisionButton">My revision plan</span></button>
+      <p id="installHint" class="small-note" data-i18n="installHint">Tip: Add this app to your Home screen for an app-like experience.</p>
+    </section>
+
+    <section id="quizScreen" class="screen">
+      <button class="back-button" id="quitQuiz">← <span data-i18n="backHome">Back to home</span></button>
+      <div class="quiz-meta">
+        <span id="quizClassPill" class="pill">Class 6</span>
+        <span id="questionCounter">Question 1 of 5</span>
+      </div>
+      <div class="progress-track"><div id="quizProgress" class="progress-fill"></div></div>
+      <div class="question-card">
+        <span id="topicLabel" class="topic-label">Living Things</span>
+        <h2 id="questionText">Question goes here</h2>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </div>
+      <button id="nextQuestion" class="primary-button full-width" disabled>Check answer</button>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-hero">
+        <div id="resultEmoji" class="result-emoji">🎉</div>
+        <p class="eyebrow" data-i18n="quizComplete">QUIZ COMPLETE</p>
+        <h2 id="resultTitle">Great effort!</h2>
+        <p id="resultSummary">You finished your quiz.</p>
+        <div class="score-ring"><strong id="scorePercent">0%</strong><span data-i18n="accuracy">accuracy</span></div>
+      </div>
+      <div class="section-heading"><div><h2 data-i18n="reviewAnswers">Review your answers</h2></div></div>
+      <div id="answerReview" class="review-list"></div>
+      <div class="section-heading"><div><h2 data-i18n="nextSteps">Your next steps</h2></div></div>
+      <div id="resultRecommendations" class="recommendation-list"></div>
+      <button id="homeAfterQuiz" class="primary-button full-width" data-i18n="homeButton">Return home</button>
+    </section>
+
+    <section id="revisionScreen" class="screen">
+      <button class="back-button" id="revisionBack">← <span data-i18n="backHome">Back to home</span></button>
+      <div class="revision-hero">
+        <span class="big-icon">🧭</span>
+        <p class="eyebrow" data-i18n="personalPlan">PERSONAL LEARNING PLAN</p>
+        <h2 data-i18n="revisionTitle">Your revision plan</h2>
+        <p data-i18n="revisionIntro">Your plan uses your quiz answers to suggest what to practise next.</p>
+      </div>
+      <div id="revisionContent"></div>
+      <div class="info-note"><strong data-i18n="howItWorks">How it works</strong><p data-i18n="ruleExplanation">This version uses transparent rules: it counts incorrect answers by topic and recommends topics with the most mistakes. It is not a trained AI model.</p></div>
+      <button id="resetProgress" class="text-button" data-i18n="resetProgress">Reset saved progress</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>✦ Sindh Science Explorer</span>
+    <span id="connectionStatus" class="connection-status">● <span data-i18n="readyOffline">Offline-ready</span></span>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
