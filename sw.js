@@ -1,4 +1,4 @@
-const CACHE_NAME = "sse-cache-v1";
+const CACHE_NAME = "sse-cache-v2";
 const APP_FILES = [
   "./",
   "./index.html",
