@@ -39,6 +39,16 @@ mentorRole: "Teacher / Project Mentor",
     correctCount:(n)=>`${n} correct`, noAnswer:"Not answered"
   },
   sd: {
+    
+schoolName: "GBLSS Mitho Khan Mirjat",
+schoolDistrict: "ضلعو ٽنڊو الهيار",
+projectPresented: "پيش ڪري ٿو",
+projectSubtitle: "مصنوعي ذهانت جي مدد سان سائنس سکڻ جو منصوبو",
+studentDevelopers: "شاگرد ڊولپر",
+class8: "اٺون ڪلاس",
+class7: "ستون ڪلاس",
+mentorLabel: "جي رهنمائي هيٺ",
+mentorRole: "استاد / منصوبي جو رهنما",
     appName:"سنڌ سائنس ايڪسپلورر", tagline:"دريافت • مشق • بهتري",
     offlineBadge:"بغير انٽرنيٽ جي سکيا", welcomeTitle:"ننڍا قدم، مضبوط سائنس.",
     welcomeText:"سائنس جي مشق ڪريو، ڪمزور موضوع سڃاڻو ۽ هر ڪوئز سان اعتماد وڌايو.",
