@@ -1,5 +1,15 @@
 const translations = {
   en: {
+    
+schoolName: "GBLSS Mitho Khan Mirjat",
+schoolDistrict: "District Tando Allahyar",
+projectPresented: "Presents",
+projectSubtitle: "An AI-assisted science learning project",
+studentDevelopers: "Student Developers",
+class8: "Class 8",
+class7: "Class 7",
+mentorLabel: "Under the guidance of",
+mentorRole: "Teacher / Project Mentor",
     appName:"Sindh Science Explorer", tagline:"Discover • Practise • Improve",
     offlineBadge:"OFFLINE-READY LEARNING", welcomeTitle:"Small steps. Strong science.",
     welcomeText:"Practise science, discover your weak topics, and build confidence one quiz at a time.",
