@@ -108,3 +108,143 @@ footer { display:flex; justify-content:space-between; gap:10px; width:min(100% -
 [dir="rtl"] .answer-option { text-align:right; }
 [dir="rtl"] .rec-top { direction:rtl; }
 @media (min-width:600px) { .hero { padding:32px; } .question-card { padding:26px; } .class-card { padding:20px; } }
+
+/* School identity */
+.school-banner {
+  text-align: center;
+  padding: 22px 16px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #dff6ed, #edf7ff);
+  border: 1px solid #dce9e5;
+  border-radius: 22px;
+}
+
+.school-emblem {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  border-radius: 15px;
+  background: #0f766e;
+  color: white;
+  font-size: 28px;
+}
+
+.school-banner h2 {
+  margin: 0;
+  color: #145c53;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.school-banner p {
+  margin: 5px 0 0;
+  color: #607d78;
+  font-size: 12px;
+}
+
+.school-banner .school-divider {
+  height: 1px;
+  max-width: 180px;
+  margin: 16px auto;
+  background: #c7dfd6;
+}
+
+.school-banner .project-label {
+  font-weight: 700;
+}
+
+.school-banner h3 {
+  margin: 5px 0;
+  color: #15323b;
+  font-size: 23px;
+}
+
+.team-section {
+  padding: 19px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #dce9e5;
+  border-radius: 22px;
+  background: #fff;
+}
+
+.team-section > h2 {
+  margin: 0 0 17px;
+  text-align: center;
+  font-size: 19px;
+  color: #15323b;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.student-card {
+  min-width: 0;
+  text-align: center;
+  padding: 10px 3px;
+  border-radius: 14px;
+  background: #f5faf8;
+}
+
+.student-photo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  max-width: 100%;
+  margin: 0 auto 9px;
+  object-fit: cover;
+  border: 3px solid #d8f4ec;
+  border-radius: 50%;
+  background: #d8f4ec;
+}
+
+.student-card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #15323b;
+  overflow-wrap: anywhere;
+}
+
+.student-card p {
+  margin: 5px 0 0;
+  color: #637b81;
+  font-size: 11px;
+}
+
+.mentor-credit {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #dce9e5;
+}
+
+.mentor-credit p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #637b81;
+}
+
+.mentor-credit h3 {
+  margin: 5px 0;
+  font-size: 17px;
+  color: #145c53;
+}
+
+@media (max-width: 360px) {
+  .student-grid {
+    gap: 5px;
+  }
+
+  .student-photo {
+    width: 62px;
+    height: 62px;
+  }
+
+  .school-banner h2 {
+    font-size: 18px;
+  }
+}
